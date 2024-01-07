@@ -29,3 +29,24 @@ for word in words:
 top_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:10]
 
 print(top_words)
+
+# Другое решение
+text1 = 'Hello world. Hello Python. Hello again.'
+words = [] # список для слов
+word1 = '' # для составления слова
+for ch in text1.lower(): # бежим по символам
+    if ch.isalpha(): # если символ буква
+        word1 += ch # добавляем букву к слову
+    else:
+        if word1: # если слово, чтоб не считало пробелы
+            words.append(word1) # иначе к словарю добавляем слово
+        word1 = '' # слово обнуляем
+else:
+    if word1: # если слово, чтоб не считало пробелы
+        words.append(word1) # если предложение заканчивается яна букву, чтоб тоже добавлялось
+
+word_cnt = {(words.count(word1), word1) for word1 in set(words)}
+word_cnt = sorted(word_cnt, reverse=True)
+# print(word_cnt[:10]) # вывод в строку
+for i in range(len(word_cnt)):
+    print(f'{i+1}. {word_cnt[i][1]: <10} - {word_cnt[i][0]}')
