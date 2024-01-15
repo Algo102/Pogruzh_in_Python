@@ -5,7 +5,7 @@
 
 def bonus_calc(names: str, bases: int, bonuses: str):
     res = {}
-    for name, base, bonus in zip (names, bases, bonuses):
+    for name, base, bonus in zip(names, bases, bonuses):
         res[name] = (base * float(bonus[:-1])/100)
     # for i in range(len(names)):
     #     res[names[i]] = (bases[i] * float(bonuses[i][:-1])/100)
