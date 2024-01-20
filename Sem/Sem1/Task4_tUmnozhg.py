@@ -3,7 +3,6 @@ for i in range (2, 11):
     for j in range(2, 6):
         res += f'{j:^2} x {i:^2} = {i * j:^2}\t'
     print(res)
-
 print()
 for i in range(2, 11):
     res = ''
@@ -12,7 +11,7 @@ for i in range(2, 11):
     print(res)
 
 
-print()
+print('------------------------------------------')
 print()
 
 
@@ -27,7 +26,7 @@ for i in range(2, 10):
     print()
 
 
-print()
+print('----------------------------------------')
 print()
 
 
