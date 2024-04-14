@@ -14,3 +14,14 @@ for i in range(1, multipl+1):
         break
     else:
         print("Подходящих вариантов нет")
+
+
+# Другое решение
+# summ = int(input("Введите сумму двух чисел "))
+# proizv = int(input("Введите произведение двух чисел "))
+# for i in range(summ // 2 + 1):  # //2 для уменьшения итераций
+#     if i * (summ - i) == proizv:
+#         print(i, summ - i)
+#         break
+#     else:
+#         print("Подходящих вариантов нет")

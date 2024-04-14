@@ -10,3 +10,9 @@ if n == 2:
 for i in range(int(n/2)):
     if 2 ** i <= n:
         print(2 ** i, end=' ')
+
+# Другое решение
+i = 0
+while 2 ** i <= n:
+    print(2**i)
+    i += 1
